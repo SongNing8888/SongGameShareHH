@@ -12,7 +12,8 @@ on:
       - "md/**"
   # 排除由同步脚本触发的提交（避免循环）
   # 同步脚本使用 [skip ci] 标记，不会触发此工作流1
-
+# 下面这一行就是新增，加上之后就出现手动运行按钮
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
